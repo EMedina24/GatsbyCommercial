@@ -1,0 +1,651 @@
+stackbitVersion: ~0.3.0
+dataDir: src/data
+pagesDir: src/pages
+models:
+  page:
+    type: page
+    label: Page
+    match:
+      - blog/author/dianne-ameter.md
+      - blog/author/gordon-norman.md
+      - blog/author/miles-tone.md
+      - blog/category/general.md
+      - blog/category/news.md
+      - blog/category/tutorials.md
+      - blog/index.md
+      - about.md
+      - contact.md
+      - features.md
+      - index.md
+      - style-guide.md
+      - terms.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: sections
+        label: Sections
+        items:
+          type: model
+          models:
+            - object_no9e5d81fc
+            - object_oigorf5apw
+            - object_ha5p8tkvi7
+            - object_cn9xkgklwq
+            - object_c5yxxr9uxi
+            - object_ovtak1kbvl
+            - object_47wbw9u5cm
+            - object_u9n4zreg3m
+            - object_kmko2fuy61
+            - object_oiu80qd01b
+            - object_a7vp2dqlp8
+            - object_p4znzvadx1
+            - object_wq4sdjpfwz
+            - object_b2uj3gwlw5
+            - object_9ybdai5o4i
+            - object_oz4fgriyd6
+            - object_8uwno8ituk
+            - object_2hwkwze8sf
+            - object_6k4wysza3e
+            - object_drwh96friz
+            - object_qsxxezn768
+            - object_k7e11lf475
+            - object_1e1fluxiot
+            - object_dt7x8kmtlo
+      - type: object
+        name: seo
+        label: Seo
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: description
+            label: Description
+          - type: list
+            name: extra
+            label: Extra
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: name
+                  label: Name
+                - type: string
+                  name: value
+                  label: Value
+                - type: string
+                  name: keyName
+                  label: Key Name
+                - type: boolean
+                  name: relativeUrl
+                  label: Relative Url
+      - type: string
+        name: template
+        label: Template
+  blog:
+    type: page
+    label: Blog
+    folder: blog
+    match: '*'
+    exclude:
+      - index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: author
+        label: Author
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: image_alt
+        label: Image Alt
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: object
+        name: seo
+        label: Seo
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: description
+            label: Description
+          - type: list
+            name: extra
+            label: Extra
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: name
+                  label: Name
+                - type: string
+                  name: value
+                  label: Value
+                - type: string
+                  name: keyName
+                  label: Key Name
+                - type: boolean
+                  name: relativeUrl
+                  label: Relative Url
+      - type: string
+        name: template
+        label: Template
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+  categorie:
+    type: data
+    label: Categorie
+    folder: categories
+    fields:
+      - type: string
+        name: id
+        label: Id
+      - type: string
+        name: link
+        label: Link
+      - type: string
+        name: title
+        label: Title
+  team:
+    type: data
+    label: Team
+    folder: team
+    fields:
+      - type: string
+        name: id
+        label: Id
+      - type: string
+        name: link
+        label: Link
+      - type: string
+        name: first_name
+        label: First Name
+      - type: string
+        name: last_name
+        label: Last Name
+      - type: image
+        name: photo
+        label: Photo
+      - type: string
+        name: photo_alt
+        label: Photo Alt
+      - type: string
+        name: bio
+        label: Bio
+  object_9ybdai5o4i:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: list
+        name: actions
+        label: Actions
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: style
+              label: Style
+      - type: boolean
+        name: has_background
+        label: Has Background
+      - type: string
+        name: background_color
+        label: Background Color
+  object_oz4fgriyd6:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_8uwno8ituk:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: team
+        label: Team
+        items:
+          type: string
+  object_2hwkwze8sf:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: text
+        name: content
+        label: Content
+  object_no9e5d81fc:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_oigorf5apw:
+    type: object
+    label: Object 6
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: author
+        label: Author
+  object_ha5p8tkvi7:
+    type: object
+    label: Object 7
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_cn9xkgklwq:
+    type: object
+    label: Object 8
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: author
+        label: Author
+  object_c5yxxr9uxi:
+    type: object
+    label: Object 9
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_ovtak1kbvl:
+    type: object
+    label: Object 10
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: author
+        label: Author
+  object_47wbw9u5cm:
+    type: object
+    label: Object 11
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_u9n4zreg3m:
+    type: object
+    label: Object 12
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: category
+        label: Category
+  object_kmko2fuy61:
+    type: object
+    label: Object 13
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_oiu80qd01b:
+    type: object
+    label: Object 14
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: category
+        label: Category
+  object_a7vp2dqlp8:
+    type: object
+    label: Object 15
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_p4znzvadx1:
+    type: object
+    label: Object 16
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: string
+        name: category
+        label: Category
+  object_wq4sdjpfwz:
+    type: object
+    label: Object 17
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
+  object_b2uj3gwlw5:
+    type: object
+    label: Object 18
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+  object_drwh96friz:
+    type: object
+    label: Object 19
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: align
+        label: Align
+  object_qsxxezn768:
+    type: object
+    label: Object 20
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: list
+        name: features
+        label: Features
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: content
+              label: Content
+            - type: string
+              name: align
+              label: Align
+            - type: image
+              name: image
+              label: Image
+            - type: string
+              name: image_alt
+              label: Image Alt
+            - type: string
+              name: image_position
+              label: Image Position
+            - type: list
+              name: actions
+              label: Actions
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: label
+                    label: Label
+                  - type: string
+                    name: url
+                    label: Url
+                  - type: string
+                    name: style
+                    label: Style
+  object_k7e11lf475:
+    type: object
+    label: Object 21
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: list
+        name: actions
+        label: Actions
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: url
+              label: Url
+            - type: string
+              name: style
+              label: Style
+      - type: string
+        name: align
+        label: Align
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: image_alt
+        label: Image Alt
+      - type: string
+        name: image_position
+        label: Image Position
+      - type: boolean
+        name: has_background
+        label: Has Background
+      - type: object
+        name: background
+        label: Background
+        fields:
+          - type: string
+            name: background_color
+            label: Background Color
+          - type: image
+            name: background_image
+            label: Background Image
+          - type: number
+            name: background_image_opacity
+            label: Background Image Opacity
+            subtype: int
+          - type: string
+            name: background_image_size
+            label: Background Image Size
+          - type: string
+            name: background_image_repeat
+            label: Background Image Repeat
+      - type: string
+        name: background_color
+        label: Background Color
+  object_1e1fluxiot:
+    type: object
+    label: Object 22
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: show_recent
+        label: Show Recent
+      - type: number
+        name: recent_count
+        label: Recent Count
+        subtype: int
+  object_dt7x8kmtlo:
+    type: object
+    label: Object 23
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: features
+        label: Features
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: content
+              label: Content
+            - type: string
+              name: align
+              label: Align
+            - type: image
+              name: image
+              label: Image
+            - type: string
+              name: image_alt
+              label: Image Alt
+            - type: string
+              name: image_position
+              label: Image Position
+            - type: list
+              name: actions
+              label: Actions
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: label
+                    label: Label
+                  - type: string
+                    name: url
+                    label: Url
+                  - type: string
+                    name: style
+                    label: Style
+  object_6k4wysza3e:
+    type: object
+    label: Object 24
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: align
+        label: Align
